@@ -41,45 +41,55 @@ Follow these steps to set up and run **Healthify** locally:
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/yourusername/Healthify.git
+git clone https://github.com/alishaverma28/Healthify.git
 cd Healthify
-
-2.Create and activate a virtual environment
+Create and activate a virtual environment
 
 Windows:
+
+bash
+Copy code
 python -m venv .venv
 .venv\Scripts\activate
+Linux/macOS:
 
-3.Install required packages
+bash
+Copy code
+python3 -m venv .venv
+source .venv/bin/activate
+Install required packages
 
+bash
+Copy code
 pip install -r requirements.txt
-
-
-4.Set up your API key
+Set up your API key
 
 Create a .env file in the project root
 
 Add your Google Generative AI key:
 
+ini
+Copy code
 GOOGLE_API_KEY=your_api_key_here
+Run the Streamlit app
 
-
-5.Run the Streamlit app
-
+bash
+Copy code
 streamlit run app.py
+Open the app in your browser
 
-'''
+Usually at http://localhost:8501
 
+Live Demo (if deployed): Healthify App
 
-## 🚀 Usage
-
+🚀 Usage
 Enter your personal details in the sidebar
 
 Rate your fitness level (0-5 scale)
 
 Type your health query
 
-Receive structured guidance:
+Receive structured guidance including:
 
 Comments on your details
 
@@ -96,7 +106,6 @@ Summary of advice
 Note: Always consult a qualified doctor for medical conditions. This app provides informational guidance only.
 
 🛠️ Code Overview
-
 app.py: Main Streamlit application
 
 requirements.txt: Python package dependencies
@@ -114,7 +123,6 @@ Generates prompt for Google Gemini AI
 Displays AI response in structured format
 
 ⚡ Technologies Used
-
 Python 3.11
 
 Streamlit for interactive UI
@@ -124,3 +132,31 @@ Pandas for BMI calculation
 Google Generative AI (Gemini) for health advice
 
 dotenv for secure API key management
+
+🧑‍💻 Contributing
+Fork the repository
+
+Create a new branch
+
+Make your improvements
+
+Submit a pull request
+
+📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+🙏 Acknowledgements
+Streamlit
+
+Google Generative AI
+
+Python open-source libraries
+
+💡 Future Improvements
+Add charts for BMI trends
+
+Allow multiple queries per session
+
+Save user history for personalized tracking
+
+Enhance UI design with Streamlit components
