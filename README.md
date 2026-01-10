@@ -4,20 +4,20 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28-orange?logo=streamlit&logoColor=white)](https://streamlit.io/)  
 [![Gemini AI](https://img.shields.io/badge/Gemini_AI-red?logo=google&logoColor=white)](https://developers.generativeai.google/)
 
-**Live Demo:** [Healthify App](https://your-streamlit-app-link.streamlit.app)  
+**Live Demo:** *(Add your Streamlit app link here)*  
 **GitHub Repo:** [Healthify GitHub](https://github.com/alishaverma28/Healthify)
 
 ---
 
 ## 🌟 Project Overview
 
-**Healthify** is an AI-powered personal health assistant that helps users make informed health decisions. Using **Google Gemini AI**, it provides **personalized guidance** based on user input, including age, gender, BMI, and fitness level. Users can ask health-related questions and get structured advice instantly.  
+**Healthify** is an AI-powered personal health assistant that helps users make informed health decisions. Using **Google Gemini AI**, it provides **personalized guidance** based on user input, including age, gender, BMI, and fitness level. Users can ask health-related questions and get structured, professional advice instantly.  
 
-This project is built with **Python**, **Streamlit**, and **Google Generative AI (Gemini)**, making it **interactive, intelligent, and beginner-friendly**.
+Built with **Python**, **Streamlit**, and **Google Generative AI (Gemini)**, this project is **interactive, intelligent, and beginner-friendly**.
 
 ---
 
-## 🏗️ Features
+## 🏋️ Key Features
 
 - Interactive **Streamlit** interface  
 - Input user details: **Name, Gender, Age, Weight, Height, Fitness Level**  
@@ -34,129 +34,114 @@ This project is built with **Python**, **Streamlit**, and **Google Generative AI
 
 ---
 
-## 💻 Installation
+## 🏛️ Architecture
 
-Follow these steps to set up and run **Healthify** locally:
+The Healthify system is structured to provide **efficient, AI-powered health guidance**:
 
-1. **Clone the repository**
+1. **User Interface (UI)** - **Streamlit Sidebar and Input Fields**
+   - Users enter their personal details (Name, Age, Gender, Weight, Height)  
+   - Fitness level slider (0-5 scale)  
+   - Text input for health queries
 
-```bash
-git clone https://github.com/alishaverma28/Healthify.git
-cd Healthify
-Create and activate a virtual environment
+2. **BMI Calculation Module**
+   - Converts height and weight into BMI  
+   - Provides a real-time comment to users on BMI value
 
-Windows:
+3. **Prompt Generation Module**
+   - Takes user inputs and query  
+   - Formats a detailed prompt for Google Gemini AI, including:
+     - User details  
+     - BMI  
+     - Fitness rating  
+     - Health query  
+   - Ensures AI response is structured (bullets, tables, summary)
 
-bash
-Copy code
-python -m venv .venv
-.venv\Scripts\activate
-Linux/macOS:
+4. **AI Engine**
+   - **Google Gemini AI** (Generative Model: `gemini-2.5-flash-lite`)  
+   - Processes the prompt and returns personalized health advice
 
-bash
-Copy code
-python3 -m venv .venv
-source .venv/bin/activate
-Install required packages
+5. **Response Display Module**
+   - Streamlit UI renders the AI-generated response  
+   - Output includes:
+     - Comments on details  
+     - Problem analysis  
+     - Possible causes  
+     - Suggested solutions  
+     - Doctor specialization (if relevant)  
+     - Summary of recommendations
 
-bash
-Copy code
-pip install -r requirements.txt
-Set up your API key
+6. **Environment & Configuration**
+   - **Python 3.11**  
+   - **Packages:** Streamlit, pandas, dotenv, google-generativeai  
+   - `.env` stores `GOOGLE_API_KEY` for secure API access
 
-Create a .env file in the project root
+**System Flow Diagram (simplified):**
 
-Add your Google Generative AI key:
+User Input → BMI Calculation → Prompt Generation → Google Gemini AI → AI Response → Streamlit UI Display
 
-ini
-Copy code
-GOOGLE_API_KEY=your_api_key_here
-Run the Streamlit app
 
-bash
-Copy code
-streamlit run app.py
-Open the app in your browser
+---
 
-Usually at http://localhost:8501
+## 🚀 Usage
 
-Live Demo (if deployed): Healthify App
+1. Enter your **personal details** in the sidebar  
+2. Rate your **fitness level** (0-5 scale)  
+3. Type your **health query**  
+4. Receive structured guidance including:  
+   - Comments on your details  
+   - Problem analysis  
+   - Possible causes  
+   - Suggested solutions  
+   - Doctor specialization (if relevant)  
+   - Summary of advice  
 
-🚀 Usage
-Enter your personal details in the sidebar
+**Note:** Always consult a qualified doctor for medical conditions. This app provides **informational guidance only**.
 
-Rate your fitness level (0-5 scale)
+---
 
-Type your health query
+## 🛠️ Code Overview
 
-Receive structured guidance including:
+- `app.py`: Main Streamlit application  
+- `requirements.txt`: Python package dependencies  
+- `.env`: Stores your Google API key (keep secret)  
 
-Comments on your details
+**Main Logic:**
 
-Problem analysis
+- Calculates BMI  
+- Accepts fitness level input  
+- Generates prompt for Google Gemini AI  
+- Displays AI response in structured format  
 
-Possible causes
+---
 
-Suggested solutions
+## ⚡ Technologies Used
 
-Doctor specialization (if relevant)
+- Python 3.11  
+- Streamlit for interactive UI  
+- Pandas for BMI calculation  
+- Google Generative AI (Gemini) for health advice  
+- dotenv for secure API key management  
 
-Summary of advice
+---
 
-Note: Always consult a qualified doctor for medical conditions. This app provides informational guidance only.
+## 🧑‍💻 Contributing
 
-🛠️ Code Overview
-app.py: Main Streamlit application
+- Fork the repository  
+- Create a new branch  
+- Make your improvements  
+- Submit a pull request  
 
-requirements.txt: Python package dependencies
+---
 
-.env: Stores your Google API key (keep secret)
+## 📄 License
 
-Main Logic:
+MIT License
 
-Calculates BMI
+---
 
-Accepts fitness level input
+## 🙏 Acknowledgements
 
-Generates prompt for Google Gemini AI
+- [Streamlit](https://streamlit.io/)  
+- [Google Generative AI](https://developers.generativeai.google/)  
+- Python open-source libraries  
 
-Displays AI response in structured format
-
-⚡ Technologies Used
-Python 3.11
-
-Streamlit for interactive UI
-
-Pandas for BMI calculation
-
-Google Generative AI (Gemini) for health advice
-
-dotenv for secure API key management
-
-🧑‍💻 Contributing
-Fork the repository
-
-Create a new branch
-
-Make your improvements
-
-Submit a pull request
-
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-🙏 Acknowledgements
-Streamlit
-
-Google Generative AI
-
-Python open-source libraries
-
-💡 Future Improvements
-Add charts for BMI trends
-
-Allow multiple queries per session
-
-Save user history for personalized tracking
-
-Enhance UI design with Streamlit components
